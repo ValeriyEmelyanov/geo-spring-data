@@ -11,4 +11,6 @@ interface ContryService {
     fun create(country: CountryDto): Country
 
     fun update(id: Int, country: CountryDto): Country
+
+    fun deleteById(id: Int)
 }

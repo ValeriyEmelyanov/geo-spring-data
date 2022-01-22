@@ -29,4 +29,9 @@ class ContryServiceImpl(
         val newCountry = byId.copy(name = countryDto.name)
         return countryRepository.save(newCountry)
     }
+
+    override fun deleteById(id: Int) {
+        getById(id)
+        countryRepository.deleteById(id)
+    }
 }

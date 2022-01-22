@@ -3,6 +3,7 @@ package com.example.geospringdata.controller
 import com.example.dto.CountryDto
 import com.example.geospringdata.model.Country
 import com.example.geospringdata.sevice.ContryService
+import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -29,4 +30,9 @@ class CountryController(
     @PutMapping("/{id}")
     fun update(@PathVariable id: Int, @RequestBody countryDto: CountryDto): Country =
         countryService.update(id, countryDto)
+
+    @DeleteMapping("/{id}")
+    fun delete(@PathVariable id: Int) {
+        countryService.deleteById(id)
+    }
 }
