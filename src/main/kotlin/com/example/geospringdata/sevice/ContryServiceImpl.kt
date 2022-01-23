@@ -15,7 +15,7 @@ class ContryServiceImpl(
         countryRepository.findAll().toList()
 
     override fun getById(id: Int): Country = countryRepository.findById(id)
-        .orElseThrow { CountryNotFoundException() }
+        .orElseThrow { CountryNotFoundException(id) }
 
     override fun create(countryDto: CountryDto): Country {
         val country = Country(

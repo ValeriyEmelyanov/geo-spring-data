@@ -8,9 +8,9 @@ interface ContryService {
 
     fun getById(id: Int): Country
 
-    fun create(country: CountryDto): Country
+    fun create(countryDto: CountryDto): Country
 
-    fun update(id: Int, country: CountryDto): Country
+    fun update(id: Int, countryDto: CountryDto): Country
 
     fun deleteById(id: Int)
 }
