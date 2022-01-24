@@ -1,6 +1,6 @@
 package com.example.geospringdata.sevice
 
-import com.example.dto.CountryDto
+import com.example.geospringdata.dto.CountryDto
 import com.example.geospringdata.model.Country
 
 interface ContryService {

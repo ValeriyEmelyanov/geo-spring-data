@@ -1,6 +1,6 @@
 package com.example.geospringdata.controller
 
-import com.example.dto.CountryDto
+import com.example.geospringdata.dto.CountryDto
 import com.example.geospringdata.model.Country
 import com.example.geospringdata.sevice.ContryService
 import org.springframework.web.bind.annotation.DeleteMapping

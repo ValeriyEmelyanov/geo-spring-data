@@ -1,7 +1,7 @@
 package com.example.geospringdata.sevice
 
-import com.example.dto.CountryDto
-import com.example.exception.CountryNotFoundException
+import com.example.geospringdata.dto.CountryDto
+import com.example.geospringdata.exception.CountryNotFoundException
 import com.example.geospringdata.model.Country
 import com.example.geospringdata.repository.CountryRepository
 import org.springframework.stereotype.Service

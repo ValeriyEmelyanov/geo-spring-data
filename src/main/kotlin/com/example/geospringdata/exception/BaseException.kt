@@ -1,4 +1,4 @@
-package com.example.exception
+package com.example.geospringdata.exception
 
 import org.springframework.http.HttpStatus
 
