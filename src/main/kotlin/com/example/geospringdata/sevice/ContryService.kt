@@ -1,16 +1,15 @@
 package com.example.geospringdata.sevice
 
 import com.example.geospringdata.dto.CountryDto
-import com.example.geospringdata.model.Country
 
 interface ContryService {
-    fun getAll(): List<Country>
+    fun getAll(): List<CountryDto>
 
-    fun getById(id: Int): Country
+    fun getById(id: Int): CountryDto
 
-    fun create(countryDto: CountryDto): Country
+    fun create(countryDto: CountryDto): CountryDto
 
-    fun update(id: Int, countryDto: CountryDto): Country
+    fun update(id: Int, countryDto: CountryDto): CountryDto
 
     fun deleteById(id: Int)
 }

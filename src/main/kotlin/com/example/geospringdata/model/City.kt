@@ -1,19 +1,19 @@
 package com.example.geospringdata.model
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity
-import javax.persistence.FetchType
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
-import javax.persistence.OneToMany
+import javax.persistence.JoinColumn
+import javax.persistence.ManyToOne
 
 @Entity
-data class Country(
+data class City(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int = 0,
     val name: String,
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "country", cascade = arrayOf(CascadeType.ALL), orphanRemoval = true)
-    var cities: List<City> = emptyList(),
+    @ManyToOne
+    @JoinColumn(name = "country_id")
+    val country: Country,
 )

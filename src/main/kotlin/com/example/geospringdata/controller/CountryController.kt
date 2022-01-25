@@ -1,7 +1,6 @@
 package com.example.geospringdata.controller
 
 import com.example.geospringdata.dto.CountryDto
-import com.example.geospringdata.model.Country
 import com.example.geospringdata.sevice.ContryService
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -19,16 +18,16 @@ class CountryController(
 ) {
 
     @GetMapping
-    fun getAll(): List<Country> = countryService.getAll()
+    fun getAll(): List<CountryDto> = countryService.getAll()
 
     @GetMapping("/{id}")
-    fun getById(@PathVariable id: Int): Country = countryService.getById(id)
+    fun getById(@PathVariable id: Int): CountryDto = countryService.getById(id)
 
     @PostMapping
-    fun create(@RequestBody countryDto: CountryDto): Country = countryService.create(countryDto)
+    fun create(@RequestBody countryDto: CountryDto): CountryDto = countryService.create(countryDto)
 
     @PutMapping("/{id}")
-    fun update(@PathVariable id: Int, @RequestBody countryDto: CountryDto): Country =
+    fun update(@PathVariable id: Int, @RequestBody countryDto: CountryDto): CountryDto =
         countryService.update(id, countryDto)
 
     @DeleteMapping("/{id}")
